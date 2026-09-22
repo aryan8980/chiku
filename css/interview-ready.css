@@ -1,0 +1,347 @@
+/* Final interview-demo presentation: a consistent, modern investing experience. */
+body.dark-mode .landing,
+.landing {
+    background: #f8fafc !important;
+    color: #17212b !important;
+    --teal: #126b57 !important;
+    --teal-deep: #0d5646 !important;
+    --teal-faint: #edf8f5 !important
+}
+
+body.dark-mode .landing:after,
+.landing:after {
+    display: none !important
+}
+
+.landing .landing-nav {
+    position: relative !important;
+    background: rgba(255, 255, 255, .97) !important;
+    border-bottom: 1px solid #e4e9ef !important;
+    backdrop-filter: blur(12px) !important
+}
+
+.landing .landing-brand {
+    font-family: var(--font-sans) !important;
+    color: #17212b !important;
+    letter-spacing: -.04em !important
+}
+
+.landing .brand-mark {
+    display: grid !important;
+    background: #126b57 !important;
+    border: 0 !important;
+    border-radius: 8px !important;
+    color: #fff !important;
+    font-family: var(--font-sans) !important
+}
+
+.landing .landing-brand span span {
+    color: #126b57 !important
+}
+
+.landing .program-name {
+    color: #7b8796 !important;
+    border-color: #e4e9ef !important;
+    font-size: 10px !important
+}
+
+.landing .landing-links a {
+    color: #526071 !important;
+    font-size: 12px !important;
+    letter-spacing: 0 !important;
+    text-transform: none !important
+}
+
+.landing .landing-actions .text-action {
+    color: #354152 !important;
+    font-size: 12px !important
+}
+
+.landing .landing-actions .gold-action {
+    background: #126b57 !important;
+    border: 1px solid #126b57 !important;
+    border-radius: 8px !important;
+    color: #fff !important;
+    font-size: 12px !important;
+    letter-spacing: 0 !important;
+    text-transform: none !important
+}
+
+.landing .hero {
+    max-width: 1440px !important;
+    grid-template-columns: minmax(360px, .88fr) minmax(520px, 1.12fr) !important;
+    gap: 64px !important;
+    padding: clamp(76px, 9vw, 126px) clamp(22px, 6vw, 96px) !important
+}
+
+.landing .hero-copy {
+    padding-left: 0 !important
+}
+
+.landing .hero-copy:before {
+    display: none !important
+}
+
+.landing .hero-eyebrow {
+    color: #126b57 !important;
+    font-size: 11px !important;
+    letter-spacing: .1em !important
+}
+
+.landing .hero h1 {
+    font-family: var(--font-sans) !important;
+    font-size: clamp(48px, 5.1vw, 76px) !important;
+    font-weight: 750 !important;
+    line-height: 1.03 !important;
+    text-transform: none !important;
+    color: #17212b !important
+}
+
+.landing .hero h1 em {
+    font-family: inherit !important;
+    background: none !important;
+    color: #126b57 !important
+}
+
+.landing .hero-lede {
+    font-family: var(--font-sans) !important;
+    color: #667085 !important;
+    font-size: 17px !important;
+    line-height: 1.65 !important
+}
+
+.landing .hero-cta {
+    background: #126b57 !important;
+    border: 1px solid #126b57 !important;
+    border-radius: 8px !important;
+    color: #fff !important;
+    font-size: 13px !important;
+    letter-spacing: 0 !important
+}
+
+.landing .outline-action {
+    background: #fff !important;
+    border: 1px solid #cfd7e1 !important;
+    border-radius: 8px !important;
+    color: #354152 !important;
+    font-size: 13px !important;
+    letter-spacing: 0 !important
+}
+
+.landing .hero-status {
+    color: #738093 !important;
+    font-size: 10px !important
+}
+
+.landing .status-dot {
+    background: #16a36a !important;
+    box-shadow: none !important
+}
+
+.landing .hero-visual {
+    height: 480px !important;
+    overflow: hidden !important;
+    background: #fff !important;
+    border: 1px solid #e1e7ed !important;
+    border-radius: 16px !important;
+    box-shadow: 0 24px 70px rgba(18, 37, 55, .12) !important
+}
+
+.landing .hero-visual:before {
+    content: "Portfolio overview" !important;
+    position: absolute !important;
+    z-index: 5 !important;
+    inset: 0 0 auto !important;
+    height: 62px !important;
+    padding: 21px 26px !important;
+    border: 0 !important;
+    border-bottom: 1px solid #edf0f3 !important;
+    clip-path: none !important;
+    background: #fff !important;
+    color: #1a2531 !important;
+    font: 700 15px var(--font-sans) !important
+}
+
+.landing .hero-visual:after {
+    display: none !important
+}
+
+.landing .operator-chamber,
+.landing .orbital,
+.landing .signal-core,
+.landing .network-label {
+    display: none !important
+}
+
+.landing .signal-grid {
+    display: none !important
+}
+
+.landing .hero-visual svg {
+    inset: 77px 22px 22px !important;
+    width: calc(100% - 44px) !important;
+    height: calc(100% - 99px) !important;
+    z-index: 1 !important
+}
+
+.landing .network-lines {
+    display: none !important
+}
+
+.landing .chart-line {
+    stroke: #159570 !important;
+    stroke-width: 3 !important;
+    filter: none !important;
+    animation: none !important
+}
+
+.landing .nodes circle {
+    fill: #159570 !important;
+    stroke: #fff !important;
+    stroke-width: 3 !important;
+    animation: none !important
+}
+
+.landing .data-chip {
+    z-index: 6 !important;
+    background: #fff !important;
+    border: 1px solid #e4e9ef !important;
+    border-radius: 9px !important;
+    box-shadow: 0 7px 16px rgba(30, 51, 70, .08) !important;
+    color: #718094 !important;
+    font: 600 9px var(--font-sans) !important;
+    letter-spacing: .02em !important;
+    animation: none !important
+}
+
+.landing .data-chip i {
+    color: #8894a4 !important
+}
+
+.landing .data-chip b {
+    color: #202c39 !important;
+    font-size: 13px !important
+}
+
+.landing .data-chip strong {
+    color: #14966f !important
+}
+
+.landing .data-chip .negative {
+    color: #d65050 !important
+}
+
+.landing .chip-one {
+    top: 91px !important;
+    left: 25px !important
+}
+
+.landing .chip-two {
+    bottom: 30px !important;
+    right: 22px !important
+}
+
+.landing .chip-three {
+    top: 93px !important;
+    right: 24px !important
+}
+
+.landing .chip-four {
+    bottom: 26px !important;
+    left: 25px !important
+}
+
+.landing .chip-five,
+.landing .scroll-indicator {
+    display: none !important
+}
+
+.landing .platform-intro {
+    background: #f4f7f9 !important;
+    border-color: #e7ebef !important;
+    color: #17212b !important
+}
+
+.landing .platform-intro h2 {
+    font-family: var(--font-sans) !important;
+    font-weight: 750 !important;
+    color: #17212b !important
+}
+
+.landing .platform-intro h2 em {
+    color: #126b57 !important
+}
+
+.landing .platform-intro>div>p:not(.hero-eyebrow),
+.landing .platform-note {
+    color: #667085 !important
+}
+
+.landing .platform-cards article {
+    background: #fff !important;
+    border-color: #e2e8ee !important;
+    border-radius: 12px !important
+}
+
+.landing .platform-cards span,
+.landing .landing-principles p {
+    color: #126b57 !important
+}
+
+.landing .platform-cards h3 {
+    color: #263341 !important
+}
+
+.landing .platform-cards p,
+.landing .landing-principles {
+    color: #667085 !important
+}
+
+.landing .landing-principles {
+    background: #fff !important;
+    border-color: #e7ebef !important
+}
+
+@media(max-width:900px) {
+    .landing .hero {
+        grid-template-columns: 1fr !important;
+        gap: 44px !important;
+        padding-top: 66px !important
+    }
+
+    .landing .hero-visual {
+        height: 420px !important;
+        border-left: 1px solid #e1e7ed !important;
+        border-top: 1px solid #e1e7ed !important
+    }
+}
+
+@media(max-width:560px) {
+    .landing .hero {
+        padding: 58px 21px 65px !important
+    }
+
+    .landing .hero h1 {
+        font-size: 47px !important
+    }
+
+    .landing .hero-visual {
+        height: 330px !important
+    }
+
+    .landing .chip-three,
+    .landing .chip-four {
+        display: none !important
+    }
+
+    .landing .hero-visual svg {
+        inset: 66px 12px 12px !important;
+        width: calc(100% - 24px) !important;
+        height: calc(100% - 78px) !important
+    }
+
+    .landing .chip-one {
+        top: 75px !important;
+        left: 14px !important
+    }
+}

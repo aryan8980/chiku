@@ -4932,3 +4932,1674 @@ body:not(.dark-mode) .app .market-item .label {
 #resetScreen {
   display: none !important;
 }
+/* ============================================================
+   INTRINSIQ — MOBILE RESPONSIVE SYSTEM
+   Does not change application logic.
+   ============================================================ */
+
+/* ---------- GLOBAL MOBILE SAFETY ---------- */
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+  max-width: 100%;
+}
+
+
+/* ============================================================
+   TABLET — 1024px
+   ============================================================ */
+
+@media (max-width: 1024px) {
+
+  .app {
+    min-width: 0;
+  }
+
+  .content {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .grid2,
+  .grid3,
+  .grid4 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .overview-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    min-width: 0;
+  }
+
+  table {
+    min-width: 650px;
+  }
+
+  .table-wrap,
+  .table-container,
+  .table-scroll {
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+
+/* ============================================================
+   MOBILE — 768px
+   ============================================================ */
+
+@media (max-width: 768px) {
+
+  /* ---------- PAGE ---------- */
+
+  html,
+  body {
+    width: 100%;
+    min-width: 0;
+    overflow-x: hidden;
+  }
+
+  body {
+    font-size: 14px;
+  }
+
+
+  /* ---------- APP ---------- */
+
+  .app {
+    width: 100%;
+    min-width: 0;
+    display: flex;
+  }
+
+
+  /* ---------- SIDEBAR ---------- */
+
+  .sidebar {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    bottom: 0;
+
+    width: min(280px, 82vw);
+    height: 100dvh;
+
+    transform: translateX(-105%);
+    transition: transform .28s ease;
+
+    z-index: 1000;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    box-shadow: 12px 0 40px rgba(0, 0, 0, .45);
+  }
+
+  .sidebar.mobile-open {
+    transform: translateX(0);
+  }
+
+  .sidebar-backdrop {
+    position: fixed !important;
+    inset: 0;
+
+    display: none;
+
+    background: rgba(0, 0, 0, .58);
+    backdrop-filter: blur(5px);
+
+    z-index: 999;
+  }
+
+  .sidebar.mobile-open ~ .sidebar-backdrop {
+    display: block;
+  }
+
+
+  /* ---------- SIDEBAR BRAND ---------- */
+
+  .sidebar .brand {
+    padding: 20px 16px;
+  }
+
+  .sidebar .brand .name {
+    font-size: 18px;
+  }
+
+  .sidebar .brand .tag {
+    font-size: 8px;
+  }
+
+  .sidebar .nav-item {
+    min-height: 46px;
+    padding: 11px 15px;
+  }
+
+
+  /* ---------- MAIN AREA ---------- */
+
+  .main,
+  .main-content,
+  .content {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .content {
+    padding: 14px;
+  }
+
+
+  /* ---------- TOPBAR ---------- */
+
+  .topbar {
+    height: auto;
+    min-height: 60px;
+
+    padding: 10px 14px;
+
+    gap: 10px;
+  }
+
+  .topbar-left,
+  .topbar-right {
+    min-width: 0;
+  }
+
+  .topbar-right {
+    gap: 6px;
+  }
+
+  .mobile-menu-btn {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  /* Hide non-essential desktop text */
+
+  .topbar .welcome-text,
+  .topbar .user-email,
+  .topbar .desktop-only {
+    display: none;
+  }
+
+
+  /* ---------- PAGE HEADERS ---------- */
+
+  .page-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+
+    margin-bottom: 16px;
+  }
+
+  .page-header h1 {
+    font-size: 23px;
+    line-height: 1.2;
+  }
+
+  .page-header p {
+    font-size: 13px;
+  }
+
+
+  /* ---------- GRIDS ---------- */
+
+  .grid2,
+  .grid3,
+  .grid4,
+  .overview-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .kpi-row {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 10px;
+  }
+
+
+  /* ---------- CARDS ---------- */
+
+  .card {
+    width: 100%;
+    min-width: 0;
+
+    padding: 16px;
+    border-radius: 12px;
+
+    overflow: hidden;
+  }
+
+  .card-header {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .card-title {
+    font-size: 15px;
+  }
+
+
+  /* ---------- OVERVIEW ---------- */
+
+  #overviewPanels {
+    width: 100%;
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  #overviewPanels > * {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .overview-panel {
+    width: 100%;
+    min-width: 0;
+  }
+
+
+  /* ---------- KPI ---------- */
+
+  .kpi {
+    min-width: 0;
+    padding: 13px;
+  }
+
+  .kpi-value {
+    font-size: 20px;
+  }
+
+  .kpi-label {
+    font-size: 10px;
+  }
+
+
+  /* ---------- TABLES ---------- */
+
+  .table-wrap,
+  .table-container,
+  .table-scroll,
+  .data-table-wrap {
+    width: 100%;
+    max-width: 100%;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    -webkit-overflow-scrolling: touch;
+
+    border-radius: 10px;
+  }
+
+  table {
+    width: max-content;
+    min-width: 680px;
+  }
+
+  th,
+  td {
+    white-space: nowrap;
+  }
+
+
+  /* ---------- TRADE JOURNAL ---------- */
+
+  .trade-journal,
+  .trade-table,
+  .journal-table {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+
+  /* ---------- STOCK SCREENER / FILTERS ---------- */
+
+  .filter-row,
+  .filters,
+  .search-row {
+    width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .filter-row input,
+  .filter-row select,
+  .filters input,
+  .filters select,
+  .search-row input,
+  .search-row select {
+    flex: 1 1 140px;
+    min-width: 0;
+  }
+
+
+  /* ---------- COMMUNITY FORUM ---------- */
+
+  .cc-layout {
+    width: 100%;
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cc-sidebar {
+    width: 100% !important;
+
+    max-height: 210px;
+
+    overflow-y: auto;
+
+    border-right: none !important;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .cc-main {
+    width: 100%;
+    min-width: 0;
+  }
+
+
+  /* ---------- FORMS ---------- */
+
+  .form-row,
+  .form-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .field {
+    width: 100%;
+  }
+
+  .field input,
+  .field select,
+  .field textarea {
+    width: 100%;
+    min-width: 0;
+
+    box-sizing: border-box;
+  }
+
+
+  /* ---------- BUTTONS ---------- */
+
+  .button-row,
+  .action-row,
+  .form-actions {
+    width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .button-row button,
+  .action-row button,
+  .form-actions button {
+    flex: 1 1 auto;
+  }
+
+
+  /* ---------- MODALS ---------- */
+
+  .modal {
+    padding: 12px;
+  }
+
+  .modal-content,
+  .modal-card,
+  .workspace-modal,
+  .customize-modal {
+    width: calc(100vw - 24px) !important;
+    max-width: none !important;
+
+    max-height: calc(100dvh - 24px);
+
+    overflow-y: auto;
+  }
+
+
+  /* ---------- WORKSPACE CUSTOMIZATION ---------- */
+
+  #workspaceModal,
+  #overviewCustomizeModal {
+    padding: 12px;
+  }
+
+  #workspaceModal .modal-content,
+  #overviewCustomizeModal .modal-content {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .module-row {
+    min-height: 46px;
+  }
+
+
+  /* ---------- HIDDEN OVERVIEW PANELS ---------- */
+
+  .overview-hidden-dock {
+    width: 100%;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .overview-hidden-dock button {
+    max-width: 100%;
+  }
+
+
+  /* ---------- LOGIN ---------- */
+
+  .login-screen {
+    width: 100%;
+    min-height: 100dvh;
+
+    padding: 16px;
+    box-sizing: border-box;
+
+    align-items: center;
+    justify-content: center;
+  }
+
+  .login-card {
+    width: 100%;
+    max-width: 430px;
+
+    padding: 24px 20px;
+
+    box-sizing: border-box;
+  }
+
+  .login-brand {
+    margin-bottom: 20px;
+  }
+
+  .login-submit {
+    width: 100%;
+    min-height: 46px;
+  }
+
+
+  /* ---------- LANDING PAGE ---------- */
+
+  .landing-page,
+  #landingPage {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .landing-nav {
+    padding: 12px 16px;
+  }
+
+  .landing-nav .nav-links {
+    display: none;
+  }
+
+  .landing-hero {
+    min-height: auto;
+
+    padding: 70px 20px 50px;
+
+    text-align: center;
+  }
+
+  .landing-hero h1 {
+    font-size: clamp(36px, 10vw, 56px);
+    line-height: 1.02;
+  }
+
+  .landing-hero p {
+    max-width: 100%;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .landing-actions {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+  }
+
+  .landing-actions button,
+  .landing-actions a {
+    width: 100%;
+  }
+
+
+  /* ---------- DASHBOARD TEXT ---------- */
+
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  h3 {
+    font-size: 15px;
+  }
+
+
+  /* ---------- CHARTS ---------- */
+
+  .chart-container,
+  .chart-wrapper,
+  .chart-card {
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  canvas {
+    max-width: 100% !important;
+  }
+
+
+  /* ---------- MANUAL TRADE LEGS ---------- */
+
+  .mt-leg {
+    width: 100%;
+    box-sizing: border-box;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .mt-leg input,
+  .mt-leg select {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+
+  /* ---------- NOTIFICATIONS ---------- */
+
+  .notification,
+  .alert-item {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+
+  /* ---------- SETTINGS ---------- */
+
+  .settings-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .settings-section {
+    width: 100%;
+    min-width: 0;
+  }
+
+}
+
+
+/* ============================================================
+   SMALL PHONES — 480px
+   ============================================================ */
+
+@media (max-width: 480px) {
+
+  .content {
+    padding: 10px;
+  }
+
+  .topbar {
+    padding: 8px 10px;
+  }
+
+  .card {
+    padding: 13px;
+    border-radius: 10px;
+  }
+
+  .kpi-row {
+    grid-template-columns: 1fr !important;
+  }
+
+  .kpi {
+    padding: 12px;
+  }
+
+  .kpi-value {
+    font-size: 19px;
+  }
+
+  .page-header h1 {
+    font-size: 21px;
+  }
+
+  .login-card {
+    padding: 20px 16px;
+    border-radius: 14px;
+  }
+
+  .mt-leg {
+    grid-template-columns: 1fr;
+  }
+
+  .button-row,
+  .action-row,
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .button-row button,
+  .action-row button,
+  .form-actions button {
+    width: 100%;
+  }
+
+  .sidebar {
+    width: 86vw;
+  }
+}
+
+
+/* ============================================================
+   VERY SMALL PHONES — 360px
+   ============================================================ */
+
+@media (max-width: 360px) {
+
+  .content {
+    padding: 8px;
+  }
+
+  .card {
+    padding: 11px;
+  }
+
+  .page-header h1 {
+    font-size: 20px;
+  }
+
+  .sidebar {
+    width: 90vw;
+  }
+}
+
+
+/* ============================================================
+   INTRINSIQ — RESPONSIVE SYSTEM
+   Fluid layout. No device-specific fixed mobile dimensions.
+   ============================================================ */
+
+/* ---------- GLOBAL FLUID SAFETY ---------- */
+
+html {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  width: 100%;
+  min-width: 0;
+  overflow-x: hidden;
+}
+
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  max-width: 100%;
+}
+
+.app,
+.content,
+.main,
+.landing {
+  min-width: 0;
+}
+
+
+/* ============================================================
+   LANDING PAGE — FLUID BASE
+   ============================================================ */
+
+.landing {
+  width: 100%;
+  min-height: 100svh;
+  overflow-x: clip;
+}
+
+.landing-nav {
+  width: 100%;
+  padding-inline: clamp(16px, 5vw, 84px) !important;
+}
+
+.landing-brand {
+  flex: 0 0 auto;
+  min-width: 0;
+}
+
+.landing-actions {
+  margin-left: auto !important;
+  flex: 0 0 auto;
+  min-width: 0;
+}
+
+.hero {
+  width: min(100%, 1440px);
+  margin-inline: auto;
+
+  min-height: calc(100svh - 72px) !important;
+
+  padding:
+    clamp(64px, 9vw, 126px)
+    clamp(18px, 6vw, 96px)
+    clamp(48px, 7vw, 100px) !important;
+
+  display: grid;
+  grid-template-columns:
+    minmax(0, .88fr)
+    minmax(0, 1.12fr) !important;
+
+  gap: clamp(28px, 5vw, 64px) !important;
+  align-items: center;
+}
+
+.hero-copy {
+  width: 100%;
+  max-width: 590px !important;
+  min-width: 0;
+}
+
+.hero h1 {
+  max-width: 100%;
+  font-size: clamp(42px, 5.4vw, 76px) !important;
+  line-height: 1.03 !important;
+  letter-spacing: clamp(-.07em, -.35vw, -.045em) !important;
+}
+
+.hero-lede {
+  width: min(100%, 590px);
+  font-size: clamp(14px, 1.2vw, 17px) !important;
+  line-height: 1.65 !important;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(8px, 1vw, 11px) !important;
+}
+
+.hero-actions > * {
+  min-width: 0;
+}
+
+.hero-visual {
+  width: 100%;
+  height: auto !important;
+  aspect-ratio: 1.22 / 1;
+  min-height: 0;
+  max-height: 540px;
+  position: relative;
+  overflow: hidden !important;
+}
+
+.hero-visual svg {
+  position: absolute;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.hero-brief {
+  width: 100%;
+  max-width: 620px;
+}
+
+.data-chip {
+  max-width: 32%;
+  box-sizing: border-box;
+}
+
+.platform-intro {
+  width: 100%;
+  grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr);
+  gap: clamp(30px, 6vw, 70px);
+}
+
+.platform-cards {
+  min-width: 0;
+}
+
+.landing-principles {
+  width: 100%;
+}
+
+
+/* ============================================================
+   TABLET / COMPACT DESKTOP
+   Structure changes only when needed.
+   ============================================================ */
+
+@media (max-width: 900px) {
+
+  .landing-nav {
+    height: clamp(64px, 9vw, 72px) !important;
+  }
+
+  .landing-links {
+    display: none !important;
+  }
+
+  .hero {
+    width: min(100%, 760px);
+    min-height: auto !important;
+
+    grid-template-columns: 1fr !important;
+
+    padding-top: clamp(86px, 12vw, 120px) !important;
+
+    gap: clamp(28px, 6vw, 48px) !important;
+  }
+
+  .hero-copy {
+    max-width: 680px !important;
+    margin-inline: auto;
+  }
+
+  .hero-visual {
+    width: 100%;
+    aspect-ratio: 1.35 / 1;
+    max-height: none;
+  }
+
+  .hero-brief {
+    margin-bottom: 0;
+  }
+
+  .platform-intro {
+    grid-template-columns: 1fr;
+  }
+
+  .platform-cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .landing-principles {
+    flex-wrap: wrap;
+  }
+
+  .module-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .workspace-panel {
+    width: min(740px, calc(100vw - 32px));
+  }
+}
+
+
+/* ============================================================
+   MOBILE — FLUID
+   ============================================================ */
+
+@media (max-width: 600px) {
+
+  /* Header */
+  .landing-nav {
+    padding-inline: clamp(14px, 4vw, 24px) !important;
+  }
+
+  .program-name {
+    display: none !important;
+  }
+
+  .landing-actions {
+    gap: 6px !important;
+  }
+
+  .landing-actions .text-action {
+    display: none !important;
+  }
+
+  .landing-actions .gold-action {
+    white-space: nowrap;
+    padding-inline: clamp(10px, 3vw, 15px) !important;
+  }
+
+
+  /* Hero */
+  .hero {
+    width: 100%;
+    padding-inline: clamp(16px, 5vw, 28px) !important;
+    padding-top: clamp(88px, 17vw, 112px) !important;
+    padding-bottom: clamp(42px, 9vw, 68px) !important;
+
+    gap: clamp(28px, 7vw, 42px) !important;
+  }
+
+  .hero-copy {
+    width: 100%;
+    max-width: 100% !important;
+  }
+
+  .hero h1 {
+    width: 100%;
+    font-size: clamp(38px, 11.5vw, 58px) !important;
+    line-height: .98 !important;
+  }
+
+  .hero-lede {
+    width: 100%;
+    max-width: 100%;
+    margin-block: clamp(18px, 5vw, 26px) !important;
+    font-size: clamp(13px, 3.5vw, 16px) !important;
+  }
+
+  .hero-actions {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px !important;
+  }
+
+  .hero-actions > * {
+    width: 100%;
+    min-height: 42px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero-status {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 7px 10px;
+    margin-top: clamp(18px, 5vw, 30px) !important;
+    line-height: 1.6;
+  }
+
+  .hero-status i {
+    display: none;
+  }
+
+
+  /* Hero visual scales with available width */
+  .hero-visual {
+    width: 100%;
+    aspect-ratio: 1.08 / 1;
+    max-height: none;
+    border-radius: clamp(10px, 3vw, 16px) !important;
+  }
+
+  .hero-visual:before {
+    height: clamp(48px, 13vw, 62px) !important;
+    padding:
+      clamp(16px, 4vw, 22px)
+      clamp(14px, 5vw, 26px) !important;
+    font-size: clamp(12px, 3.2vw, 15px) !important;
+  }
+
+  .hero-visual svg {
+    inset:
+      clamp(58px, 15vw, 77px)
+      clamp(8px, 4vw, 22px)
+      clamp(12px, 4vw, 22px) !important;
+
+    width: calc(100% - clamp(16px, 8vw, 44px)) !important;
+    height: auto !important;
+    aspect-ratio: 1 / .72;
+  }
+
+  /* Keep floating information attached to the visual */
+  .data-chip {
+    max-width: 38%;
+    transform: scale(.78);
+    transform-origin: center;
+  }
+
+  .chip-one {
+    left: 2%;
+  }
+
+  .chip-two {
+    right: 2%;
+  }
+
+  .chip-three {
+    right: 8%;
+  }
+
+  .chip-four {
+    left: 2%;
+  }
+
+  .chip-five {
+    right: 4%;
+  }
+
+  .network-label {
+    font-size: clamp(6px, 1.5vw, 8px);
+  }
+
+  .node-risk,
+  .node-execution {
+    display: none;
+  }
+
+
+  /* Hero details */
+  .hero-brief {
+    grid-template-columns: 1fr !important;
+    margin-top: clamp(24px, 6vw, 32px);
+  }
+
+  .hero-brief div,
+  .hero-brief div + div {
+    padding: 11px 0 !important;
+    border-right: 0 !important;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .hero-brief div:last-child {
+    border-bottom: 0;
+  }
+
+
+  /* Landing sections */
+  .platform-intro {
+    padding-inline: clamp(16px, 5vw, 28px);
+    padding-block: clamp(52px, 10vw, 80px);
+    gap: clamp(28px, 7vw, 42px);
+  }
+
+  .platform-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .platform-cards article {
+    min-height: 0;
+  }
+
+  .landing-principles {
+    padding-inline: clamp(16px, 5vw, 28px);
+    gap: 12px;
+  }
+
+  .landing-principles div {
+    flex-wrap: wrap;
+    line-height: 1.7;
+    gap: 10px 14px;
+  }
+
+  .landing-principles i {
+    display: none;
+  }
+
+  .scroll-indicator {
+    display: none;
+  }
+}
+
+
+/* ============================================================
+   APP / DASHBOARD RESPONSIVENESS
+   ============================================================ */
+
+@media (max-width: 900px) {
+
+  .content {
+    min-width: 0;
+    width: 100%;
+    padding: clamp(14px, 4vw, 24px) !important;
+  }
+
+  .overview-panels {
+    grid-template-columns: 1fr;
+  }
+
+  .module-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .module-list {
+    min-width: 0;
+  }
+
+  .table-container,
+  .table-wrap,
+  .table-scroll {
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  table {
+    min-width: 640px;
+  }
+
+  .filter-bar,
+  .form-grid {
+    min-width: 0;
+  }
+}
+
+
+@media (max-width: 700px) {
+
+  .topbar {
+    padding-inline: clamp(10px, 4vw, 16px) !important;
+  }
+
+  .page-main-title {
+    font-size: clamp(22px, 6vw, 32px);
+  }
+
+  .page-desc {
+    max-width: 100%;
+  }
+
+  .overview-panels {
+    grid-template-columns: 1fr !important;
+  }
+
+  .overview-hidden-dock {
+    align-items: stretch;
+  }
+
+  .overview-hidden-dock button {
+    max-width: 100%;
+  }
+
+  .workspace-panel {
+    width: calc(100vw - 24px);
+    max-height: calc(100svh - 24px);
+    overflow-y: auto;
+    padding: clamp(16px, 5vw, 24px);
+  }
+
+  .modal-heading {
+    align-items: flex-start;
+  }
+
+  .modal-heading h2 {
+    font-size: clamp(20px, 6vw, 27px);
+  }
+
+  .modal-footer {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  .topbar {
+    min-height: 58px;
+  }
+
+  .content {
+    padding: clamp(12px, 4vw, 18px) !important;
+  }
+
+  .grid2,
+  .grid3,
+  .grid4,
+  .settings-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .kpi-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .card,
+  .kpi-card,
+  .market-card {
+    min-width: 0;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr !important;
+  }
+
+  .button-row,
+  .action-row,
+  .form-actions {
+    flex-wrap: wrap;
+  }
+
+  .module-row {
+    grid-template-columns: 26px minmax(0, 1fr) auto auto auto;
+  }
+
+  .login-screen {
+    width: 100%;
+    min-height: 100svh;
+    padding: clamp(12px, 4vw, 24px);
+  }
+
+  .login-card {
+    width: min(100%, 430px);
+  }
+}
+
+
+@media (max-width: 420px) {
+
+  .kpi-row {
+    grid-template-columns: 1fr !important;
+  }
+
+  .module-row {
+    grid-template-columns: 24px minmax(0, 1fr) auto;
+  }
+
+  .module-row button:nth-last-child(-n+2) {
+    display: none;
+  }
+
+  table {
+    min-width: 580px;
+  }
+}
+
+
+/* ---------- Touch / accessibility ---------- */
+
+@media (hover: none) and (pointer: coarse) {
+
+  .landing-actions button,
+  .hero-actions button,
+  .hero-actions a,
+  .nav-item,
+  .module-row button,
+  .overview-hidden-dock button {
+    min-height: 42px;
+  }
+
+  .card:hover,
+  .kpi-card:hover,
+  .platform-cards article:hover {
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .landing *,
+  .landing *::before,
+  .landing *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+/* ============================================================
+   INTRINSIQ — FINAL FLUID LANDING FIX
+   The landing page must use the complete viewport.
+   No fixed phone widths/heights are used here.
+   ============================================================ */
+
+html,
+body {
+  width: 100%;
+  min-width: 0;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+#landingPage {
+  width: 100%;
+  min-width: 0;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#landingPage .landing-nav {
+  width: 100%;
+  max-width: none;
+  box-sizing: border-box;
+}
+
+#landingPage .hero {
+  width: 100%;
+  max-width: 1440px;
+  margin-inline: auto;
+  box-sizing: border-box;
+}
+
+/* ------------------------------------------------------------
+   Fluid mobile structure
+   ------------------------------------------------------------ */
+
+@media (max-width: 900px) {
+
+  #landingPage .hero {
+    width: 100%;
+    max-width: 760px;
+    grid-template-columns: minmax(0, 1fr) !important;
+    min-height: auto !important;
+    margin-inline: auto;
+  }
+
+  #landingPage .hero-copy {
+    width: 100%;
+    min-width: 0;
+    max-width: 680px !important;
+    margin-inline: auto;
+  }
+
+  #landingPage .hero-visual {
+    width: 100%;
+    min-width: 0;
+    height: auto !important;
+    aspect-ratio: 1.35 / 1;
+    max-height: none;
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 600px) {
+
+  /* Viewport */
+  #landingPage {
+    min-height: 100svh;
+  }
+
+  /* Navigation */
+  #landingPage .landing-nav {
+    width: 100%;
+    min-width: 0;
+    padding-inline: clamp(14px, 4.5vw, 24px) !important;
+    gap: clamp(8px, 2.5vw, 14px);
+  }
+
+  #landingPage .landing-brand {
+    min-width: 0;
+  }
+
+  #landingPage .landing-brand > span:not(.brand-mark) {
+    white-space: nowrap;
+  }
+
+  #landingPage .program-name,
+  #landingPage .landing-links,
+  #landingPage .landing-actions .text-action {
+    display: none !important;
+  }
+
+  #landingPage .landing-actions {
+    margin-left: auto !important;
+    min-width: 0;
+  }
+
+  #landingPage .landing-actions .gold-action {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    max-width: 100%;
+    white-space: nowrap;
+    padding-inline: clamp(11px, 3.5vw, 16px) !important;
+  }
+
+  /* Hero */
+  #landingPage .hero {
+    width: 100%;
+    max-width: none !important;
+    min-height: auto !important;
+    margin: 0 !important;
+
+    padding:
+      clamp(52px, 14vw, 88px)
+      clamp(16px, 5vw, 28px)
+      clamp(42px, 10vw, 72px) !important;
+
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: clamp(30px, 8vw, 48px) !important;
+  }
+
+  #landingPage .hero-copy {
+    width: 100%;
+    max-width: none !important;
+    min-width: 0;
+  }
+
+  #landingPage .hero-eyebrow {
+    width: 100%;
+    margin-bottom: clamp(12px, 3.5vw, 18px) !important;
+    font-size: clamp(8px, 2.2vw, 11px) !important;
+    letter-spacing: .11em !important;
+  }
+
+  #landingPage .hero h1 {
+    width: 100%;
+    max-width: 100% !important;
+    margin: 0 !important;
+
+    /*
+      Font scales continuously with the viewport.
+      It is not tied to a particular phone width.
+    */
+    font-size: clamp(38px, 11.5vw, 60px) !important;
+    line-height: .99 !important;
+    letter-spacing: -.065em !important;
+  }
+
+  #landingPage .hero-lede {
+    width: 100%;
+    max-width: 600px !important;
+    margin:
+      clamp(18px, 5vw, 26px)
+      0
+      clamp(20px, 5vw, 28px) !important;
+
+    font-size: clamp(13px, 3.7vw, 16px) !important;
+    line-height: 1.58 !important;
+  }
+
+  #landingPage .hero-actions {
+    width: 100%;
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 8px !important;
+  }
+
+  #landingPage .hero-actions > * {
+    width: 100%;
+    min-width: 0;
+    min-height: clamp(42px, 11vw, 48px);
+    box-sizing: border-box;
+    justify-content: center;
+  }
+
+  #landingPage .hero-status {
+    width: 100%;
+    margin-top: clamp(18px, 5vw, 28px) !important;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px 10px;
+    line-height: 1.6;
+  }
+
+  #landingPage .hero-status i {
+    display: none;
+  }
+
+  /* Portfolio visual */
+  #landingPage .hero-visual {
+    width: 100%;
+    max-width: none;
+    height: auto !important;
+    min-height: 0 !important;
+    aspect-ratio: 1.12 / 1;
+
+    margin: 0 !important;
+    border-radius: clamp(10px, 3vw, 16px) !important;
+  }
+
+  #landingPage .hero-visual:before {
+    height: auto !important;
+    min-height: clamp(48px, 13vw, 62px);
+    padding:
+      clamp(15px, 4vw, 22px)
+      clamp(14px, 5vw, 26px) !important;
+
+    font-size: clamp(12px, 3.5vw, 15px) !important;
+    display: flex;
+    align-items: center;
+  }
+
+  #landingPage .hero-visual svg {
+    position: absolute;
+    top: clamp(58px, 15vw, 78px) !important;
+    right: clamp(8px, 4vw, 22px) !important;
+    bottom: clamp(12px, 4vw, 22px) !important;
+    left: clamp(8px, 4vw, 22px) !important;
+
+    width: auto !important;
+    height: auto !important;
+    max-width: none !important;
+    max-height: none !important;
+  }
+
+  /*
+    Chips remain proportional to the card instead of being
+    placed with phone-specific pixel coordinates.
+  */
+  #landingPage .data-chip {
+    max-width: min(38%, 180px);
+    padding: clamp(7px, 2.2vw, 10px) clamp(8px, 2.8vw, 12px) !important;
+    font-size: clamp(7px, 2vw, 9px) !important;
+  }
+
+  #landingPage .data-chip b {
+    font-size: clamp(10px, 2.8vw, 13px) !important;
+  }
+
+  #landingPage .data-chip i {
+    font-size: clamp(6px, 1.8vw, 8px) !important;
+  }
+
+  #landingPage .data-chip strong {
+    font-size: clamp(7px, 2.2vw, 10px) !important;
+  }
+
+  /* Brief information below hero */
+  #landingPage .hero-brief {
+    width: 100%;
+    max-width: none;
+    grid-template-columns: minmax(0, 1fr) !important;
+    margin-top: clamp(22px, 6vw, 34px) !important;
+  }
+
+  #landingPage .hero-brief div,
+  #landingPage .hero-brief div + div {
+    padding: clamp(10px, 3vw, 15px) 0 !important;
+    border-right: 0 !important;
+    border-bottom: 1px solid var(--line);
+  }
+
+  #landingPage .hero-brief div:last-child {
+    border-bottom: 0;
+  }
+
+  /* Following landing sections */
+  #landingPage .platform-intro {
+    width: 100%;
+    grid-template-columns: minmax(0, 1fr) !important;
+    padding:
+      clamp(48px, 11vw, 80px)
+      clamp(16px, 5vw, 28px) !important;
+    gap: clamp(26px, 7vw, 42px);
+  }
+
+  #landingPage .platform-cards {
+    width: 100%;
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  #landingPage .landing-principles {
+    width: 100%;
+    padding:
+      clamp(20px, 5vw, 28px)
+      clamp(16px, 5vw, 28px);
+  }
+}
+
+
+/* ------------------------------------------------------------
+   Ultra-narrow fallback: still fluid, just reduces typography
+   ------------------------------------------------------------ */
+
+@media (max-width: 360px) {
+
+  #landingPage .hero h1 {
+    font-size: clamp(34px, 11vw, 43px) !important;
+  }
+
+  #landingPage .hero-lede {
+    font-size: clamp(12px, 3.7vw, 14px) !important;
+  }
+}
+
